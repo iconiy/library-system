@@ -1,3 +1,5 @@
+import getpass
+import pwinput # Shows *** when typing
 
 class Account:
     def __init__(self, username, password):
@@ -7,7 +9,7 @@ class Account:
     def login(self):
         uname = input("Username: ")
         if uname == self.username:
-            pword = input("Password: ")
+            pword = pwinput.pwinput("Password: ")
             if pword == self.password:
                 print("Logged in!")
                 return True
