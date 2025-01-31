@@ -1,4 +1,4 @@
-
+import sys
 
 def main():
     intro()
@@ -14,11 +14,11 @@ def intro():
 def menu():
     running = True
     while running:
-        choice = input('Select an option: '
-                       '\n 1. Books'
-                       '\n 2. Account'
-                       '\n 3. Support'
-                       '\n 4. Exit')
+        print('1. Books'
+             '\n2. Account'
+             '\n3. Support'
+             '\n4. Exit')
+        choice = input('Select an option: ')
         if choice == '1':
             show_books()
             menu()
@@ -29,7 +29,7 @@ def menu():
             support()
             menu()
         if choice == '4':
-            running = False
+            sys.exit(0)
 
 def show_books():
     pass
