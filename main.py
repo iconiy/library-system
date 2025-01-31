@@ -3,9 +3,10 @@ import book as b
 
 def main():
     intro()
+    # Need to find a better way to bring the account info in than this
     hp = b.Book('Harry Potter', 'JP', '2000', 'Fantasy', '234', 14)
     menu(hp)
-    goodbye()
+    #goodbye()
 
 def intro():
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
