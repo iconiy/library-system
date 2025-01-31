@@ -15,5 +15,11 @@ class Book:
         choice = input('Press Enter to check out...')
         if choice == '':
             print(f'You have successfully checked out {self.title} by {self.author}.')
+        else:
+            print('Cancelled transaction.')
 
     def get_info(self):
+        print(f'Title: {self.title}'
+              f'\nAuthor: {self.author}'
+              f'\nYear: {self.year}'
+              f'\nGenre: {self.genre}')

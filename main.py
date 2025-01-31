@@ -1,9 +1,10 @@
 import sys
+import book as b
 
 def main():
     intro()
-    cout = {}
-    menu()
+    hp = b.Book('Harry Potter', 'JP', '2000', 'Fantasy', '234', 14)
+    menu(hp)
     goodbye()
 
 def intro():
@@ -11,7 +12,7 @@ def intro():
     print('~~~~~~~~~~~~~~~Library Books~~~~~~~~~~~~~~~~')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
-def menu():
+def menu(hp):
     running = True
     while running:
         print('1. Books'
@@ -23,8 +24,8 @@ def menu():
             show_books()
             menu()
         if choice == '2':
-            account()
-            menu()
+            account(hp)
+            menu(hp)
         if choice == '3':
             support()
             menu()
@@ -34,11 +35,13 @@ def menu():
 def show_books():
     pass
 
-def account():
-    pass
+def account(hp):
+    b.Book.get_info(hp)
 
 def support():
     print('Please contact our support at support@library.com')
+
+
 
 if __name__ == '__main__':
     main()
